@@ -27,8 +27,13 @@ const LivePlayer = ({
             src={streamUrl}
             className="w-full h-full"
             allowFullScreen
-            allow="autoplay; encrypted-media; picture-in-picture"
+            allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
             title={title}
+            sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+            style={{
+              WebkitAllowsInlineMediaPlayback: 'true',
+              WebkitPlaysinline: 'true'
+            } as React.CSSProperties}
           />
         </div>
       </Card>
