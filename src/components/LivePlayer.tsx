@@ -29,12 +29,24 @@ const LivePlayer = ({
             allowFullScreen
             allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
             title={title}
-            sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+            sandbox="allow-same-origin allow-scripts allow-forms"
             style={{
               WebkitAllowsInlineMediaPlayback: 'true',
               WebkitPlaysinline: 'true'
             } as React.CSSProperties}
           />
+          {/* Block overlay pop-ups */}
+          <style dangerouslySetInnerHTML={{__html: `
+            iframe[title="${title}"]::after {
+              content: '';
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              pointer-events: none;
+            }
+          `}} />
         </div>
       </Card>
     </div>
