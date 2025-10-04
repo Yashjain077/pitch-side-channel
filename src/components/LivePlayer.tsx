@@ -11,7 +11,7 @@ interface LivePlayerProps {
 }
 
 const LivePlayer = ({ 
-  streamUrl = "https://cricketstan.github.io/Channel-13/", 
+  streamUrl = "https://sklink.pages.dev/sklive?id=tntsp4", 
   title = "Channel 13 - Live Cricket",
   isLive = true 
 }: LivePlayerProps) => {
