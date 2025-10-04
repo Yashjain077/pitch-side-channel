@@ -1,5 +1,5 @@
 import Header from "@/components/Header";
-import LivePlayer from "@/components/LivePlayer";
+import VideoPlayer from "@/components/VideoPlayer";
 
 const Index = () => {
   return (
@@ -19,7 +19,7 @@ const Index = () => {
           </div>
           
           <div className="max-w-5xl mx-auto">
-            <LivePlayer />
+            <VideoPlayer />
           </div>
         </section>
       </main>
